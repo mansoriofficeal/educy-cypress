@@ -1,0 +1,14 @@
+{
+  "name": "educy",
+  "version": "1.0.0",
+  "description": "otomation vi using cypress",
+  "main": "index.js",
+  "author": "mansori",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^12.9.0"
+  }
+}
