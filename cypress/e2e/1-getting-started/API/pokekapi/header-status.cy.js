@@ -38,4 +38,13 @@ describe('Automation API with pokeapi', () => {
     
     // Melakukan validasi menggunakan expect
     expect(body.ability.name).to.eq("limber");
- });  
+ });
+ 
+    it('Successfully validate negative response', () => {
+      cy.request({
+        method: 'GET',
+        url: 'https://pokeapi.co/api/v2/pokemon/eduwork',
+        failOnStatusCode: false
+      }).as('eduwork')
+      cy.get('@eduwork').its('status').should('equal', 404)
+    });
